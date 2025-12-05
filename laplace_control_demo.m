@@ -1,4 +1,4 @@
-function laplace_control_demo(fs)
+7function laplace_control_demo(fs)
 % LAPPLACE_CONTROL_DEMO  Toolbox-free demo of first-order heating control
 %   fs : sample rate in Hz (samples per second) — same fs used in main pipeline.
 

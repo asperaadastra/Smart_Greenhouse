@@ -1,6 +1,5 @@
 %% greenhouse_main.m
 % Smart Greenhouse pipeline: simulation -> LTI -> FFT -> filtering -> Laplace demo -> dashboard
-% Run this file. Requires Control System Toolbox (for tf, pole) and Signal Processing Toolbox.
 
 clear; close all; clc;
 
