@@ -141,17 +141,7 @@ All configuration values can be edited directly in their respective MATLAB files
 | Dashboard         | MATLAB `uifigure`, sliders, UI components  |
 | Control Demo      | Discrete-time first-order heating model    |
 
-## 📸 Screenshots / Examples
-- Time-Domain Signals (Raw vs LTI)
-[ insert screenshot here ]
-- FFT Comparison (Raw vs LTI)
-[ insert screenshot here ]
-- Filtered & Denoised Signals
-[ insert screenshot here ]
-- Laplace-like Heating Control Simulation
-[ insert screenshot here ]
-- Dashboard UI
-[ insert screenshot here ]
+
 ## 🗺 Roadmap / Future Work
 - Kalman filtering for noise suppression
 - PCA-based anomaly detection
