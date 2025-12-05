@@ -9,8 +9,7 @@ fs = 1;                 % sampling rate [Hz] (1 sample per second)
 T = 24*3600;            % simulate 24 hours (in seconds) -> long vector; but to make plots quicker we will simulate 48 hours with lower rate
 fs = 1/60;              % 1 sample per minute
 duration_hours = 48;    % simulate 48 hours to see diurnal cycles
-t = (0:1/fs:duration_hours*3600)'; % time vector in seconds
-
+t = (0:1/fs:duration_hours*3600)'; % time vector in second
 % 1) Simulate signals
 signals = simulate_signals(t, fs); % returns struct with fields: temperature, humidity, co2, soil, light
 

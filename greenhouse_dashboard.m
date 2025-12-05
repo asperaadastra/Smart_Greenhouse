@@ -13,24 +13,20 @@ sld.ValueChangedFcn = @(s,event) update_cutoff(s, event, L, t, fs, hPlotD);
 
 end
 
-function update_cutoff(src, event, L, t, fs, hPlotD)
-    % Get new cutoff from slider
+function update_cutoff(src, event, x, t, fs, hPlotD)
     cutoff = src.Value;
 
-    % Toolbox-free simple first-order RC filter
-    % a*y[n] = y[n-1] + b*(x[n] - y[n-1])
     dt = 1/fs;
     RC = 1/(2*pi*cutoff);
     alpha = dt / (RC + dt);
 
-    filtered = zeros(size(L));
-    filtered(1) = L(1);
+    filtered = zeros(size(x));
+    filtered(1) = x(1);
 
-    for i = 2:length(L)
-        filtered(i) = filtered(i-1) + alpha * (L(i) - filtered(i-1));
+    for i = 2:length(x)
+        filtered(i) = filtered(i-1) + alpha * (x(i) - filtered(i-1));
     end
 
-    % Update plot
     set(hPlotD, 'YData', filtered);
     drawnow;
 end
